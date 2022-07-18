@@ -1,0 +1,47 @@
+{
+  "name": "solidity-template",
+  "version": "1.0.0",
+  "description": "Solidity template",
+  "author": "Jo Rocca",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "hh:compile": "npx hardhat compile && npx hardhat size-contracts",
+    "hh:deploy": "npx hardhat compile && npx ts-node scripts/deploy/index.ts",
+    "hh:upgrade": "npx hardhat compile && npx ts-node scripts/deploy/index.ts upgrade-contracts",
+    "hh:node": "npx hardhat node --hostname localhost",
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrocca82/solidity-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jrocca82/solidity-template/issues"
+  },
+  "homepage": "https://github.com/jrocca82/solidity-template#readme",
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.1",
+    "@openzeppelin/contracts": "^4.7.0",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.10.1",
+    "hardhat-contract-sizer": "^2.6.1",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.7.0",
+    "@openzeppelin/hardhat-upgrades": "^1.19.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.6",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.21"
+  }
+}
